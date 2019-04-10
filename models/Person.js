@@ -2,9 +2,8 @@
 //the person will have a name and current job title and a list of keyword(skills)imported by teseract.
 //position will be name job description and list of keywords(skills).
 const mongoose = require("../db/connection");
-const Schema = mongoose.Schema;
 
-const Person = new Schema({
+const Person = new mongoose.Schema({
   name: String,
   jobTitle: String,
   keywords: []

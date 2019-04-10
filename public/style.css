@@ -1,0 +1,18 @@
+body {
+  background-color: rgba(69, 69, 71, 0.5);
+  background-repeat: no-repeat;
+  display: block;
+  background-image: url("background.gif");
+  background-size: cover;
+}
+.jumbotron {
+  width: 500px;
+  height: 500px;
+  background-color: transparent !important;
+  color: white;
+}
+/* .nav-link {
+  background-image: url("read.png");
+  width: 10px;
+  height: 10px;
+} */
