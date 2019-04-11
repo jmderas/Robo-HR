@@ -9,6 +9,4 @@ const Person = new mongoose.Schema({
   keywords: []
 });
 
-module.exports = {
-  Person: mongoose.model("Person", Person)
-};
+module.exports = Person;
