@@ -9,26 +9,47 @@
     <link rel=" stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     {{!-- <link rel="stylesheet" type="text/css" src="css/bootstrap-tagsinput.css"> --}}
-    <title>Document</title>
+    <title>ROBO-HR</title>
 </head>
 
-<body>
+<body
+    style="background-color: rgba(69, 69, 71,
+        0.5); background-repeat: no-repeat; display: block; background-image: url(https://i.imgur.com/RBjPPrm.gif); background-size: cover;">
+    <nav class="navbar navbar-expand-lg navbar-dark .bg-transparent">
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="/"> <img src="../../public/read.png"
+                            style="height:50px; border-radius: 5px;"><span class="sr-only">(current)</span></a>
+                </li>
+        </div>
+
+        <div class="btn-group">
+            <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
+                aria-expanded="false">
+            </button>
+            <div class="dropdown-menu dropdown-menu-right" style="background-color: #A9A9A9;">
+                <a class="dropdown-item" href="/position">Departments</a>
+                <a class="dropdown-item" href="/position/new">New Positions</a>
+            </div>
+        </div>
+    </nav>
     <div class="container">
         <form action="/position/new" method="post">
             <div class="form-group">
-                <label for="position">Position Name</label>
+                <label for="position" style="color:white;">Position Name</label>
                 <input type="text" class="form-control" name="position" placeholder="Example input">
             </div>
             <div class="form-group">
-                <label for="jobDescription">Job Description</label>
+                <label for="jobDescription" style="color:white;">Job Description</label>
                 <input type="text" class="form-control" name="jobDescription" placeholder="Another input">
             </div>
             <div class="form-group">
-                <label for="department">Department</label>
+                <label for="department" style="color:white;">Department</label>
                 <input type="text" class="form-control" name="department" placeholder="Another input">
             </div>
             <div class="form-group">
-                <label for="keywords">Skills(comma separated)</label>
+                <label for="keywords" style="color:white;">Skills (comma separated)</label>
                 <input type="text" class="form-control" name="keywords" data-role="tagsinput">
             </div>
             <button class="btn btn-primary" type="submit">Submit form</button>
@@ -36,6 +57,14 @@
         </form>
     </div>
 </body>
-{{!-- <script src="bootstrap-tagsinput.mins.js"></script> --}}
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
 
 </html>

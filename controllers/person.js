@@ -4,7 +4,8 @@ const tesseract = require("tesseract.js");
 module.exports = {
   new: function(req, res) {
     //take file from request and run tesseract.
-    Tesseract.recognize(myImage).then(function(result) {
+
+    tesseract.recognize(req.files.evaluation).then(function(result) {
       console.log(result);
     });
 

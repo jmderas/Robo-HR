@@ -10,6 +10,4 @@ const Position = new mongoose.Schema({
   keywords: []
 });
 
-module.exports = {
-  Position: mongoose.model("Position", Position)
-};
+module.exports = Position;

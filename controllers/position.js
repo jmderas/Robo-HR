@@ -1,4 +1,4 @@
-const { Position } = require("../models/Position");
+const { Position, Person } = require("../models/index");
 
 module.exports = {
   index: function(req, res) {
@@ -22,16 +22,25 @@ module.exports = {
       res.redirect("/position/");
     });
   },
-  show: function(req, res) {},
+  show: function(req, res) {
+    Position.findOne({ _id: req.params.id }).exec(function(err, position) {
+      Person.find({
+        jobTitle: position.name
+      }).then(function(persons) {
+        console.log(persons);
+        res.render("position/show", { position, persons });
+      });
+    });
+  },
   edit: function(req, res) {},
   update: function(req, res) {},
   delete: function(req, res) {},
   department: function(req, res) {
     console.log(req.query);
-    Position.find({
+    var query = Position.find({
       department: req.query.department
-    }).then(positions => {
-      console.log(positions);
+    }).select("name");
+    query.exec(function(err, positions) {
       res.render("position/department", { positions });
     });
   }
