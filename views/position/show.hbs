@@ -8,7 +8,7 @@
     <link rel=" stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="public/style.css">
-    <title>Document</title>
+    <title>ROBO-HR</title>
 </head>
 
 <body
@@ -33,50 +33,53 @@
         </div>
     </nav>
 
-    <h2 style="color:white;">People</h2>
+    <h1 style="color:white; padding-left: 40px; font-size: 50px;">People</h1>
     <main>
-
         <ul>
-            <div class="">
-                <div class="card text-center" style="width:400px; margin: 5px auto;">
 
-                    <div class="card-body btn btn-primary">
-                        {{position.name}}
-                    </div>
-                </div>
-                <!-- Button trigger modal -->
+            <div class="">
+                <h1 class="text-center"
+                    style="color: white; text-decoration:underline; font-size:50px; font-weight:800;">
+                    {{position.name}}
+                </h1>
+            </div>
+            </div>
+            <!-- Button trigger modal -->
+            <div class="col text-center">
                 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">
                     Add Applicant
                 </button>
+            </div>
 
-                <!-- Modal -->
-                <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog"
-                    aria-labelledby="exampleModalLongTitle" aria-hidden="true">
-                    <div class="modal-dialog" role="document">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h5 class="modal-title" id="exampleModalLongTitle">Add Applicant</h5>
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                </button>
-                            </div>
-                            <div class="modal-body">
-                                <form action="/person/upload" method="post" encType="multipart/form-data">
-                                    <div class="form-group">
-                                        <label for="name" style="color:white;">Name</label>
-                                        <input type="text" class="form-control" name="name" placeholder="Name">
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="evaluation" style="color:white;"> Evaluation File</label>
-                                        <input type="file" class="form-control" name="evaluation">
-                                    </div>
-                                    <button class="btn btn-primary" type="submit">Submit form</button>
-                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                </form>
-                            </div>
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog"
+                aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLongTitle">Add Applicant</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <form action="/person/upload" method="post" encType="multipart/form-data">
+                                <div class="form-group">
+                                    <label for="name" style="color:white;">Name</label>
+                                    <input type="text" class="form-control" name="name" placeholder="Name">
+                                </div>
+                                <div class="form-group">
+                                    <label for="evaluation" style="color:white;"> Evaluation
+                                        File</label>
+                                    <input type="file" class="form-control" name="evaluation">
+                                </div>
+                                <button class="btn btn-primary" type="submit">Submit form</button>
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            </form>
                         </div>
                     </div>
                 </div>
+            </div>
             </div>
         </ul>
     </main>

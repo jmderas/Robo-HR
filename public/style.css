@@ -11,6 +11,9 @@ body {
   background-color: transparent !important;
   color: white;
 }
+h1 {
+  font-family: VT323;
+}
 /* .nav-link {
   background-image: url("read.png");
   width: 10px;

@@ -33,18 +33,21 @@
         </div>
     </nav>
     <main>
-        <h2 style="color:white;">Positions</h2>
+        <h1 style="color:white; padding-left: 40px; font-size: 50px;">Positions</h1>
         <ul>
             <div class="">
-                {{#each positions as |position|}}
-                <div class="card">
-                    <a href="/position/{{position._id}}">
-                        <div class="card-body">
-                            {{position.name}}
-                        </div>
-                    </a>
+                <div class="card text-center " style="width:398px; height:66px; margin: 5px auto;">
+                    {{#each positions as |position|}}
+                    <div class="" style="width:300px;">
+                        <a href="/position/{{position._id}}" class="btn btn-primary"
+                            style="color:white; width:396px; height:64px; text-decoration:none;">
+                            <div class="card-body">
+                                {{position.name}}
+                            </div>
+                        </a>
+                    </div>
+                    {{/each}}
                 </div>
-                {{/each}}
             </div>
         </ul>
     </main>
