@@ -5,7 +5,7 @@
 
 
 <h2>Technology</h2>
-<p>MongoDB</p>
-<p>Node.js</p>
-<p>HTML</p>
-<p>CSS</p>
+<p>- MongoDB</p>
+<p>- Node.js</p>
+<p>- HTML</p>
+<p>- CSS</p>
